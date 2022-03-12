@@ -9,7 +9,7 @@ body{
     max-width: 1000px;
     margin: 0 auto;
 }
-/* ************************* Card element  */
+/* ************************* Card element ************************* */
 section.card{
     max-width: 23.75rem;
     margin: 0 auto;
@@ -29,4 +29,28 @@ section.card{
     font-size: 0.875rem;
     color: #67768c;
 }
-/* to do note: finish footer of card befor moving on to wider version of the card */
+.card footer{
+    display: flex;
+    gap: 0.625rem;/*10px*/
+    align-items: center;
+}
+.card footer img{
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+/* ****************** Wider version ****************** */
+@media screen and (min-width: 800px) {
+    section.card{
+        max-width: 46.875rem;
+        display: flex;
+    }
+    .card picture{
+        /* flex: 0 1 26.667%; */
+        flex-basis: 27.78%;
+    }
+    .card > div{
+        flex: 0 1 73.333%;
+    }
+}
